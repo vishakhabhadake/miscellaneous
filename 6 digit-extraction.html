@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        function digitExtraction(n) {
+            while (n > 0) {
+                let lastDigit = n % 10;
+                console.log(lastDigit);
+                n = n / 10;
+            }
+        }
+
+        digitExtraction(7789);
+    </script>
+
+</body>
+
+</html>

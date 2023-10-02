@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        //  n - i + 1;
+        function fn5(n) {
+            let string = '';
+            for (let i = 1; i <= n; i++) {
+                for (let j = 0; j < n - i + 1; j++) {
+                    string += '*';
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn5(5);
+
+        // n - i + 1
+        function fn6(n) {
+            let string = '';
+            for (let i = 0; i <= n; i++) {
+                for (let j = 1; j < n - i + 1; j++) {
+                    string += `${j} `;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn6(9);
+
+        function fn7(n) {
+            let string = '';
+            for (let i = 0; i <= n; i++) {
+                for (let j = 0; j < n - i - 1; j++) {
+                    string += ` `;
+                }
+                for (let j = 0; j < 2 * i + 1; j++) {
+                    string += `*`;
+                }
+                for (let j = 0; j < n - i - 1; j++) {
+                    string += ` `;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn7(9);
+
+        function fn8(n) {
+            let string = '';
+            for (let i = 0; i <= n; i++) {
+                for (let j = 0; j < i; j++) {
+                    string += ` `;
+                }
+                for (let j = 0; j < 2 * n - (2 * i + 1); j++) {
+                    string += `*`;
+                }
+                for (let j = 0; j < i; j++) {
+                    string += ` `;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn8(9);
+
+        function fn9() {
+            fn7(9);
+            fn8(9);
+        }
+
+        fn9();
+
+        function fn10(n) {
+            let string = '';
+            for (let i = 1; i <= 2 * n - 1; i++) {
+                let stars = i;
+                if (i > n) stars = 2 * n - i;
+                for (let j = 1; j <= stars; j++) {
+                    string += `*`;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn10(9);
+
+        function fn11(n) {
+            let string = '';
+            let start = 1;
+            for (let i = 0; i < n; i++) {
+                if (i % 2 == 0) { start = 1 }
+                else { start = 0 }
+                for (let j = 0; j <= i; j++) {
+                    string += `${start} `
+                    start = 1 - start;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn11(9);
+
+        function fn12(n) {
+            let string = '';
+            let space = 2 * (n - 1);
+            for (let i = 1; i <= n; i++) {
+                // number
+                for (let j = 1; j <= i; j++) {
+                    string += `${j}`
+                }
+                // space
+                for (let j = 1; j <= space; j++) {
+                    string += ` `;
+                }
+                // number
+                for (let j = i; j >= 1; j--) {
+                    string += `${j}`
+                }
+                string += '\n';
+                space -= 2;
+            }
+            console.log(string);
+        }
+        fn12(4);
+
+        function fn13(n) {
+            let string = '';
+            let num = 1;
+            for (let i = 1; i <= n; i++) {
+                for (let j = 1; j <= i; j++) {
+                    string += `${num} `;
+                    num += 1;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn13(5);
+
+        function fn14(n) {
+            let string = '';
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < i; j++) {
+                    string += `${String.fromCharCode(j + 65)} `;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn14(5);
+
+        function fn15(n) {
+            let string = '';
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j < n - i; j++) {
+                    string += `${String.fromCharCode(j + 65)} `;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn15(5);
+
+        function fn16(n) {
+            let string = '';
+            for (let i = 0; i < n; i++) {
+                for (let j = 0; j <= i; j++) {
+                    string += `${String.fromCharCode(i + 65)} `;
+                }
+                string += '\n';
+            }
+            console.log(string);
+        }
+        fn16(5);
+
+        //         let n = 5; // you can take input from prompt or change the value
+        // let string = "";
+        // // External loop
+        // for (let i = 1; i <= n; i++) {
+        //   // printing characters
+        //   for (let j = 0; j < i; j++) {
+        //     string += String.fromCharCode(j + 65);
+        //   }
+        //   string += "\n";
+        // }
+        // console.log(string);
+    </script>
+
+</body>
+
+</html>
