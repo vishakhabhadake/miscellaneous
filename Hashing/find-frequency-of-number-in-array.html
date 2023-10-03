@@ -9,14 +9,9 @@
 <script>
     let hashMap = (arr) => {
         let map = new Map();
-        console.log("original array is : ", arr);
         for (let i = 0; i < arr.length; i++) {
-            console.log("map.has(arr[i])", map.has(arr[i]));
-            console.log("at ",i, "val is :", arr[i]);
             if (map.has(arr[i])) {
-                // console.log("map.get(arr[i])", map.get(arr[i]));
                 map.set(arr[i], map.get(arr[i]) + 1);
-                console.log("map.get(arr[i]) after", map.get(arr[i]));
             }
             else {
                 map.set(arr[i], 1);
